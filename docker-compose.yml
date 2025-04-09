@@ -1,0 +1,11 @@
+services:
+  fastapi-app:
+    build: .
+    container_name: fastapi-container
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/code
+    environment:
+      - ENV=production
+    restart: always
